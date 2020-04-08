@@ -128,4 +128,4 @@ async def info(ctx):
 
 
 keep_alive()
-client.run("NjkyMzYwNzg0MjY4NzU0OTY0.Xo38eQ.scB_HNzQeGwQQ_PDX15GHZrb5ks")
+client.run("TOKEN")
