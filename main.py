@@ -119,6 +119,11 @@ async def info(ctx):
 
     await ctx.send(embed=embed)
 
+@client.command()
+async def logo(ctx):
+    embed = discord.Embed(colour=discord.Colour.red())
+    embed.set_image(url="https://cdn.discordapp.com/attachments/684090883158573109/697947452099002378/1586474027404.gif")
+    await ctx.send(embed=embed)
 
 
 
