@@ -12,13 +12,6 @@ async def on_ready():
     await client.change_presence(status=discord.Status.dnd, activity=discord.Game("uwu"))
     print("bot is ready")
 
-@client.event
-async def on_member_join(member):
-    print(f'{member} has joined a server.')
-
-@client.event
-async def on_member_remove(member):
-    print(f'{member} has left a server.')
 
 @client.command()
 async def ping(ctx):
@@ -81,32 +74,27 @@ async def unmute(ctx, member: discord.Member):
     await member.remove_roles(role)
     await ctx.send(f'{member} unmuted')
 
+@client.command()
+async def intro(ctx):
+  await ctx.send("https://cdn.discordapp.com/attachments/667446394977779754/667448774645383169/RaGe_2020_Intro.mp4")
 
 @client.command()
-async def pravda(ctx):
-    await ctx.send("Workers of the world unite!")
-
-@client.command()
-async def culprits(ctx):
-    await ctx.send("AKM > AK103")
-
-
-
-@client.command(pass_context=True, aliases=["propaganda"])
-async def manifesto(ctx):
-
-  embed = discord.Embed(
-    colour = discord.Colour.red()
-  )
-
-  embed.set_author(name="Pravda Manifesto Preface")
-  embed.add_field(name="uwu", value="The Pravda Union is a conglomeration of United Republics spanning from Eastern Europe and Northern Asia into Siberia. The works of the party have driven the parasites out of her borders and have continued to ensure safety within her beloved empire. The Central Committee and works have exceeded their mortal ambitions, and restored order and prosperity to the vast Union. Pravda stands as a turning point in history, about the enter into a state of hard work and productivity. To accomplish such a remarkable task, we must end the exploitation by the bourgeoisie, spread out socialist ideals and stand victorious over our foes. Workers of the world, unite! ☭")
-
+async def logo(ctx):
+  embed = discord.Embed()
+  embed.set_image(url="https://media.discordapp.net/attachments/483227709992861696/590435949658374170/rage_traced_2d.png?width=474&height=474")
   await ctx.send(embed=embed)
+
+
+@client.command()
+async def logo3d(ctx):
+  embed = discord.Embed()
+  embed.set_image(url="https://media.discordapp.net/attachments/483227709992861696/590435953466933262/rage_traced_3d.png?width=474&height=474")
+  await ctx.send(embed=embed)
+
 
 @client.command()
 async def info(ctx):
-    embed = discord.Embed(title="red velvet", description="communist bot with a kpop pfp", color=0xf4c2c2)
+    embed = discord.Embed(title="Rage Boot", description="communist bot with a rage pfp", color=0xf4c2c2)
 
     # give info about you here
     embed.add_field(name="Author", value="champii~")
@@ -119,6 +107,19 @@ async def info(ctx):
 
     await ctx.send(embed=embed)
 
+@client.command()
+async def wheelchair(ctx):
+    embed = discord.Embed(colour=discord.Colour.red())
+    embed.set_image(url="https://cdn.discordapp.com/attachments/684090883158573109/697947452099002378/1586474027404.gif")
+    await ctx.send(embed=embed)
+
+
+
+
+
+
+
+
 
 
 
@@ -128,4 +129,4 @@ async def info(ctx):
 
 
 keep_alive()
-client.run("NjkyMzYwNzg0MjY4NzU0OTY0.Xo38eQ.scB_HNzQeGwQQ_PDX15GHZrb5ks")
+client.run("TOKEN")
