@@ -24,15 +24,16 @@ async def on_member_remove(member):
 async def ping(ctx):
     await ctx.send(f'pong! {round(client.latency * 1000)}ms')
 
+
 @client.command(aliases=["8ball"])
-async def _8ball(ctx, *, question):
+async def _8ball(ctx):
     responses = ["yes",
                  "maybe",
                  "my sources say no",
                  "my sources say yes",
                  "no",
                  "bitch tf you crazy?"]
-    await ctx.send(f"Question: {question}\nAnswer: {random.choice(responses)}")
+    await ctx.send( f" {random.choice(responses)}, "+ctx.message.author.mention)
 
 @client.command(aliases=["roll"])
 async def dice(ctx):
