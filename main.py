@@ -136,6 +136,11 @@ async def eesti(ctx):
 async def cough(ctx, member: discord.Member):
   await ctx.send(f"{member.mention} got coughed on by "+ctx.message.author.mention)
 
+@client.command(aliases=["gitrepo"])
+async def repo(ctx):
+  embed=discord.Embed(title="discord bot github repo", url="https://github.com/champiix/bot", description="ayaya", color=0xff00ff)
+  embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/590944283675328541/702653440966524988/JPEG_20190814_011853.jpg")
+  await ctx.send(embed=embed)
 
 
 
