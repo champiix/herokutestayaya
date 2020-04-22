@@ -126,7 +126,15 @@ async def logo(ctx):
     embed.set_image(url="https://cdn.discordapp.com/attachments/684090883158573109/697947452099002378/1586474027404.gif")
     await ctx.send(embed=embed)
 
+@client.command()
+async def eesti(ctx):
+  embed = discord.Embed(colour=discord.Colour.blue())
+  embed.set_image(url="https://media.tenor.com/images/2cac9910ace64c5a882dc6f6e5a7fed5/tenor.gif")
+  await ctx.send(embed=embed)
 
+@client.command(aliases=["coughon"])
+async def cough(ctx, member: discord.Member):
+  await ctx.send(f"{member.mention} got coughed on by "+ctx.message.author.mention)
 
 
 
