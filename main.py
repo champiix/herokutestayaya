@@ -133,7 +133,10 @@ async def eesti(ctx):
   await ctx.send(embed=embed)
 
 @client.command(aliases=["coughon"])
+@commands.has_role('infected')
 async def cough(ctx, member: discord.Member):
+  role = discord.utils.get(ctx.guild.roles, name='infected')
+  await member.add_roles(role)
   await ctx.send(f"{member.mention} got coughed on by "+ctx.message.author.mention)
 
 @client.command(aliases=["gitrepo"])
