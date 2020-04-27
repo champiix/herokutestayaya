@@ -145,7 +145,12 @@ async def repo(ctx):
   embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/590944283675328541/702653440966524988/JPEG_20190814_011853.jpg")
   await ctx.send(embed=embed)
 
-
+@client.command()
+@commands.has_role("doctor")
+async def heal(ctx, member: discord.Member):
+  role = discord.utils.get(ctx.guild.roles, name='infected')
+  await member.remove_roles(role)
+  await ctx.send(f"{member.mention} got healed by "+ctx.message.author.mention)
 
 
 
