@@ -152,7 +152,21 @@ async def heal(ctx, member: discord.Member):
   await member.remove_roles(role)
   await ctx.send(f"{member.mention} got healed by "+ctx.message.author.mention)
 
+@client.command()
+async def t(ctx):
+  await ctx.send("stfu")
 
+@client.command(aliases=["n"])
+async def nordvpn(ctx):
+  await ctx.send("Being on the internet can be very scary. With nord VPN, it can shield you from those harmful sites and safe guard your nudes you send to people like Insan. Be sure to use CODE pravda at checkout for a discount on the 3 yr plan which is only as low as 3.99 per month!")
+
+@client.command()
+async def tunnelbear(ctx):
+  await ctx.send("Tunnelbear is the simple VPN app that makes it easy to browse privately and enjoy a more open internet. With tunnelbear turned on, your connection via landline or Wi-Fi is secured and your online activity is kept private from your internet provider advertizers, hackers and anyone else who's trying to track you or profit from your data. They have a top rated privacy policy and they do not log your activity and you can try it for free, with 500 megabytes of free data and no credit card required over at the link in the description. And, if you choose to get an unlimited plan you can save 10 percent by going to tunnelbear.com/pravda also linked in the video description, actually the same link; Yeah!")
+
+@client.command()
+async def pia(ctx):
+  await ctx.send("Looking for an affordable and reliable VPN? Private Internet Access encrypts your internet traffic and uses a safe protected IP. It also works on both your computer and smartphone. Check it out today at privateinternetaccess.com/
 
 keep_alive()
 client.run("TOKEN")
