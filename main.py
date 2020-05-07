@@ -24,7 +24,6 @@ async def on_member_remove(member):
 async def ping(ctx):
     await ctx.send(f'pong! {round(client.latency * 1000)}ms')
 
-
 @client.command(aliases=["8ball"])
 async def _8ball(ctx):
     responses = ["yes",
@@ -90,8 +89,6 @@ async def pravda(ctx):
 @client.command()
 async def culprits(ctx):
     await ctx.send("AKM > AK103")
-
-
 
 @client.command(pass_context=True, aliases=["propaganda"])
 async def manifesto(ctx):
