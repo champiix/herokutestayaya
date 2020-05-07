@@ -168,5 +168,19 @@ async def tunnelbear(ctx):
 async def pia(ctx):
   await ctx.send("Looking for an affordable and reliable VPN? Private Internet Access encrypts your internet traffic and uses a safe protected IP. It also works on both your computer and smartphone. Check it out today at privateinternetaccess.com/
 
+@client.command()
+async def slap(ctx, member : discord.Member):
+  responses=["https://media.tenor.com/images/bd092fb261df4588a51f9dd1f4815fea/tenor.gif",
+  "https://media.tenor.com/images/ac09dd389d43f3bc0adad6432a942532/tenor.gif",
+  "https://media.tenor.com/images/6dbd997e3e79f21b7841b244833325c0/tenor.gif",
+  "https://media.tenor.com/images/604a56f1e6e594beb00c265ea7a40dca/tenor.gif",
+  "https://media.tenor.com/images/56387025912c48b5af27c0711a2645b8/tenor.gif",
+  "https://media.tenor.com/images/f8f050aa79f92f3e45669ef8db45ed1e/tenor.gif",
+  "https://media.tenor.com/images/79c666d38d5494bad25c5c023c0bbc44/tenor.gif",
+  "https://media.tenor.com/images/47698b115e4185036e95111f81baab45/tenor.gif",
+  "https://media.tenor.com/images/53b846f3cc11c7c5fe358fc6d458901d/tenor.gif",
+  "https://media.tenor.com/images/091e0502e5fda1201ee76f5f26eea195/tenor.gif"]
+  await ctx.send(f"{random.choice(responses)} \n {member.mention} got slapped by"+ctx.message.author.mention)
+
 keep_alive()
 client.run("TOKEN")
