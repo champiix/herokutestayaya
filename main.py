@@ -180,5 +180,6 @@ async def slap(ctx, member : discord.Member):
    embed=discord.Embed(color=0xf4c2c2)
   embed.set_image(url=f"{random.choice(responses)}")
   await ctx.send(f"{member.mention} got slapped by "+ctx.message.author.mention, embed=embed)
+
 keep_alive()
 client.run("TOKEN")
