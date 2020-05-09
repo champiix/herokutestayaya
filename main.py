@@ -177,7 +177,8 @@ async def slap(ctx, member : discord.Member):
   "https://media.tenor.com/images/47698b115e4185036e95111f81baab45/tenor.gif",
   "https://media.tenor.com/images/53b846f3cc11c7c5fe358fc6d458901d/tenor.gif",
   "https://media.tenor.com/images/091e0502e5fda1201ee76f5f26eea195/tenor.gif"]
-  await ctx.send(f"{random.choice(responses)} \n {member.mention} got slapped by"+ctx.message.author.mention)
-
+   embed=discord.Embed(color=0xf4c2c2)
+  embed.set_image(url=f"{random.choice(responses)}")
+  await ctx.send(f"{member.mention} got slapped by "+ctx.message.author.mention, embed=embed)
 keep_alive()
 client.run("TOKEN")
