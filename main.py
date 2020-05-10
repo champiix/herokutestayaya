@@ -181,5 +181,11 @@ async def slap(ctx, member : discord.Member):
   embed.set_image(url=f"{random.choice(responses)}")
   await ctx.send(f"{member.mention} got slapped by "+ctx.message.author.mention, embed=embed)
 
+@client.command(aliases=["simpdetector"])
+async def simprate(ctx,member : discord.Member):
+  responses = ["1","2","3","4","5","6","7","8","9","10"]
+  await ctx.send(f"{member.mention} is {random.choice(responses)} out of 10 a simp")
+
+
 keep_alive()
 client.run("TOKEN")
