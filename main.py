@@ -34,7 +34,7 @@ async def _8ball(ctx):
                  "bitch tf you crazy?"]
     await ctx.send( f" {random.choice(responses)}, "+ctx.message.author.mention)
 
-@@client.command(aliases=["roll"])
+@client.command(aliases=["roll"])
 async def dice(ctx):
     await ctx.send(f"{random.raninit(1,6)})")
 
