@@ -9,7 +9,7 @@ client = commands.Bot(command_prefix = ".")
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.dnd, activity=discord.Game("uwu"))
+    await client.change_presence(activity=discord.Streaming(name="uwu hewwo", url="https://www.twitch.tv/champii"))
     print("bot is ready")
 
 @client.event
