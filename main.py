@@ -34,15 +34,9 @@ async def _8ball(ctx):
                  "bitch tf you crazy?"]
     await ctx.send( f" {random.choice(responses)}, "+ctx.message.author.mention)
 
-@client.command(aliases=["roll"])
+@@client.command(aliases=["roll"])
 async def dice(ctx):
-    responses = ["1",
-                 "2",
-                 "3",
-                 "4",
-                 "5",
-                 "6"]
-    await ctx.send(f"{random.choice(responses)}")
+    await ctx.send(f"{random.raninit(1,6)})")
 
 @client.command(aliases=["cf"])
 async def coinflip(ctx):
@@ -183,8 +177,7 @@ async def slap(ctx, member : discord.Member):
 
 @client.command(aliases=["simpdetector"])
 async def simprate(ctx,member : discord.Member):
-  responses = ["1","2","3","4","5","6","7","8","9","10"]
-  await ctx.send(f"{member.mention} is {random.choice(responses)} out of 10 a simp")
+  await ctx.send(f"{member.mention} is {random.randint(1,10)} out of 10 a simp")
 
 
 keep_alive()
